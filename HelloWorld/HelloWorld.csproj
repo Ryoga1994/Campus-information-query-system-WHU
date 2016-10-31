@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7004BE25-3674-4A0D-A27B-50F986A1CA7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelloWorld</RootNamespace>
+    <AssemblyName>HelloWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.Charts.Design, Version=12.6.0.7, Culture=neutral, PublicKeyToken=90f470f34c89ccaf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.Charts.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Charts, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.DotNetBar.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=12.6.0.7, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design, Version=12.6.0.7, Culture=neutral, PublicKeyToken=26d81176cfa2b486, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.SuperGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=12.6.0.7, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\DotNetBar for Windows Forms\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.3DAnalystUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.3DAnalystUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ADF.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ADF.Connection.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Core, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ADF.Connection.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ADF.Connection.Local.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Core, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ADF.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ADF.Local.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Animation, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Animation.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnimationUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.AnimationUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcCatalog, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcCatalog.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcCatalogUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcCatalogUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcGlobe, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcGlobe.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMap, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcMap.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcMapUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcScan, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcScan.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcScene, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.ArcScene.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.AxPublisherControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.AxPublisherControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Cadastral, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Cadastral.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CadastralUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.CadastralUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.CartoUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoX, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.CartoX.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoXUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.CartoXUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Catalog.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.CatalogUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataInterop, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataInteropUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataInteropUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesFile.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesGDB.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesNetCDF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesNetCDF.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesOleDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesOleDB.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesRaster.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRasterUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesRasterUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Desktop.AddIns, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Desktop.AddIns.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DisplayUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EditorExt, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.EditorExt.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EngineCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.EngineCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Geodatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseDistributed, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoDatabaseDistributed.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseDistributedUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoDatabaseDistributedUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseExtensions, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoDatabaseExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoDatabaseUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Geoprocessing.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoprocessingUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoprocessingUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Geoprocessor.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoReferenceUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoReferenceUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoStatisticalAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoStatisticalAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoStatisticalAnalystUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoStatisticalAnalystUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoSurvey, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GeoSurvey.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GISClient, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GISClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCoreUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GlobeCoreUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GraphicsCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GraphicsCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GraphicsSymbols, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.GraphicsSymbols.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Location, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Location.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.LocationUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.LocationUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Maplex, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Maplex.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalysis, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.NetworkAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.NetworkAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalystUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.NetworkAnalystUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.OutputExtensions, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.OutputExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.OutputExtensionsUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.OutputExtensionsUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.OutputUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.OutputUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Publisher, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Publisher.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.PublisherControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.PublisherControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.PublisherUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.PublisherUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Schematic, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Schematic.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SchematicControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.SchematicControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SchematicUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.SchematicUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Search, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Server, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.SpatialAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.SpatialAnalystUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.System.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.SystemUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.TrackingAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.TrackingAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.TrackingAnalystUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.TrackingAnalystUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Version.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroForm.Designer.cs">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library.Designer.cs">
+      <DependentUpon>Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectDetails.Designer.cs">
+      <DependentUpon>ObjectDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchInfo.Designer.cs">
+      <DependentUpon>SearchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studyBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studyBuilding.Designer.cs">
+      <DependentUpon>studyBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRegister.Designer.cs">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library.resx">
+      <DependentUpon>Library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectDetails.resx">
+      <DependentUpon>ObjectDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchInfo.resx">
+      <DependentUpon>SearchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studyBuilding.resx">
+      <DependentUpon>studyBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegister.resx">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newpause.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\看书自习.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\热门景点.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\食堂.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\食堂2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\统计图表.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\宿舍.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽修改.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽修改1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽修改2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景图.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\看书自习.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\看书自习.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\路径查找.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\热门景点.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\统计图表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\食堂.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\宿舍.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武大校徽5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景图1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景图2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\背景图21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多边形查询.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\清除 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\放大.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
